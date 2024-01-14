@@ -20,11 +20,16 @@ git clone https://github.com/haiibo/openwrt-packages
 #赋予删除的权限         
 shopt -s extglob
 #删除除了luci-app-bypass之外的所有插件，如果保留smartdns可以这样写rm -rf openwrt-packages/!(luci-app-bypass|luci-app-smartdns|helloworld)
-rm -rf openwrt-packages/!(luci-app-vssr|lua-maxminddb|helloworld)
+#rm -rf openwrt-packages/!(luci-app-vssr|lua-maxminddb|helloworld)
 #拷贝到插件库package
-cp -r openwrt-packages/luci-app-vssr package/
-cp -r openwrt-packages/lua-maxminddb package/
-cp -r openwrt-packages/helloworld package/
+#cp -r openwrt-packages/luci-app-vssr package/
+#cp -r openwrt-packages/lua-maxminddb package/
+#cp -r openwrt-packages/helloworld package/
+#rm -rf openwrt-packages
+
+#精简代码
+rm -rf openwrt-packages/!(luci-app-vssr|lua-maxminddb|helloworld)
+cp -r openwrt-packages/{luci-app-vssr,lua-maxminddb,helloworld} package/
 rm -rf openwrt-packages
 
 #删除feeds自带mosdns、v2ray-geodata
