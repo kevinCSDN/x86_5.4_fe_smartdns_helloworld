@@ -11,14 +11,14 @@
 #
 
 # Uncomment a feed source
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+#sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
 git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
 
 #拉取文件包里一个插件的方法
 #拉取整个包
-git clone https://github.com/haiibo/openwrt-packages 
+#git clone https://github.com/haiibo/openwrt-packages 
 #赋予删除的权限         
-shopt -s extglob
+#shopt -s extglob
 #删除除了luci-app-bypass之外的所有插件，如果保留smartdns可以这样写rm -rf openwrt-packages/!(luci-app-bypass|luci-app-smartdns|helloworld)
 #rm -rf openwrt-packages/!(luci-app-vssr|lua-maxminddb|helloworld)
 #拷贝到插件库package
