@@ -28,9 +28,10 @@ shopt -s extglob
 #rm -rf openwrt-packages
 
 #精简代码
-rm -rf openwrt-packages/!(luci-app-vssr|lua-maxminddb|helloworld)
-cp -r openwrt-packages/{luci-app-vssr,lua-maxminddb,helloworld} package/
-rm -rf openwrt-packages
+#rm -rf openwrt-packages/!(luci-app-vssr|lua-maxminddb|helloworld)
+#cp -r openwrt-packages/{luci-app-vssr,lua-maxminddb,helloworld} package/
+#rm -rf openwrt-packages
+
 
 #删除feeds自带mosdns、v2ray-geodata
 rm -rf ./feeds/packages/net/mosdns
@@ -59,7 +60,8 @@ git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall.git
 #mosdns
 # git clone -b v5 --depth 1 https://github.com/sbwml/luci-app-mosdns.git
 git clone --depth=1 https://github.com/fw876/helloworld.git
-# git clone https://github.com/kevinCSDN/lua-maxminddb.git  #git lua-maxminddb 依赖
+git clone https://github.com/kevinCSDN/lua-maxminddb.git  #git lua-maxminddb 依赖
+git clone https://github.com/qqhpc/jerrykuku-luci-app-vssr.git
 
 # git clone https://github.com/kevinCSDN/luci-app-vssr-plus.git  
 
