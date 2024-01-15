@@ -35,6 +35,7 @@ sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf
 
 
 git clone https://github.com/imy7/luci-app-turboacc
+shopt -s extglob
 rm -rf openwrt-packages/!(Lean)
 cp -r Lean package/
 rm -rf luci-app-turboacc
