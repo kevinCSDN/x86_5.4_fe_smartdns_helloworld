@@ -11,7 +11,8 @@
 #
 
 # Uncomment a feed source
-sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+#sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git kenzo https://github.com/kiddin9/openwrt-packages' feeds.conf.default
 #git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
 
 #拉取文件包里一个插件的方法
@@ -34,11 +35,11 @@ sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf
 
 
 
-git clone https://github.com/kiddin9/openwrt-packages
-shopt -s extglob
-rm -rf openwrt-packages/!(luci-app-turboacc)
-cp -r luci-app-turboacc package/
-rm -rf openwrt-packages
+#git clone https://github.com/kiddin9/openwrt-packages
+#shopt -s extglob
+#rm -rf openwrt-packages/!(luci-app-turboacc|shortcut-fe|)
+#cp -r luci-app-turboacc package/
+#rm -rf openwrt-packages
 
 #删除feeds自带mosdns、v2ray-geodata
 rm -rf ./feeds/packages/net/mosdns
