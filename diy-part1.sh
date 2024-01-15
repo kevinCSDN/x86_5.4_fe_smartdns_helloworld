@@ -33,6 +33,12 @@ sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf
 #rm -rf openwrt-packages
 
 
+
+git clone https://github.com/imy7/luci-app-turboacc
+rm -rf openwrt-packages/!(Lean)
+cp -r Lean package/
+rm -rf luci-app-turboacc
+
 #删除feeds自带mosdns、v2ray-geodata
 rm -rf ./feeds/packages/net/mosdns
 rm -rf feeds/packages/net/v2ray-geodata
