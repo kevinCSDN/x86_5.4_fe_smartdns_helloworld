@@ -62,6 +62,7 @@ git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall.git
 git clone --depth=1 https://github.com/fw876/helloworld.git
 #git clone https://github.com/kevinCSDN/lua-maxminddb.git  #git lua-maxminddb 依赖
 #git clone https://github.com/qqhpc/jerrykuku-luci-app-vssr.git
+git clone --depth=1 https://github.com/cfxy2010/luci-app-turboacc.git
 
 # git clone https://github.com/kevinCSDN/luci-app-vssr-plus.git  
 
